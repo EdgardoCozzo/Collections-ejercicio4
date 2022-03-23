@@ -14,12 +14,12 @@ import java.util.ArrayList;
 public class Peliculas {
     private String titulo;
     private String director;
-    private Integer hora;
+    private Double hora;
 
     public Peliculas() {
     }
 
-    public Peliculas(String titulo, String director, Integer hora) {
+    public Peliculas(String titulo, String director, Double hora) {
         this.titulo = titulo;
         this.director = director;
         this.hora = hora;
@@ -41,11 +41,11 @@ public class Peliculas {
         this.director = director;
     }
 
-    public Integer getHora() {
+    public Double getHora() {
         return hora;
     }
 
-    public void setHora(Integer hora) {
+    public void setHora(Double hora) {
         this.hora = hora;
     }
 

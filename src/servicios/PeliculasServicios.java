@@ -28,7 +28,7 @@ public class PeliculasServicios {
         System.out.println("Ingrese el director de esa pelicula..");
         p.setDirector(leer.next());
         System.out.println("Ingrese la duracion de esa pelicula");
-        p.setHora(leer.nextInt());
+        p.setHora(leer.nextDouble());
         
         
         return p;
@@ -43,25 +43,56 @@ public class PeliculasServicios {
         
     }
     
+   
+    
     public void mostrarPeliMasDeUnaHora(ArrayList<Peliculas>listaPeli){ 
         
         
-        System.out.println("Las peliculas q son de mas de una hora son = ");
         
-       if(listaPeli.iterator().next().getHora()>1){ 
-           for (Peliculas pel : listaPeli) {
-               System.out.println(pel.toString());
-           }
-       }
+        
+        for (Peliculas peliculas : listaPeli) {
+            if (peliculas.getHora()>1) {
+                System.out.println("Dura mas de una Hora");
+                System.out.println(peliculas);
+            }
+        }
     
     }
     
     public void ordenaMayoraMenor(ArrayList<Peliculas>listaPeli){
     
-        Collections.sort(listaPeli, utilidades.Comparadores.ordenarPorDuracionDesc);
+        Collections.sort(listaPeli, utilidades.Comparadores.ordenarPorDuracionDescen);
         
         for (Peliculas pel : listaPeli) {
-            System.out.println(pel.toString());
+            System.out.println(pel);
         }
     }
+    
+    public void ordenaMenoraMayor(ArrayList<Peliculas>listaPeli){
+    
+        Collections.sort(listaPeli, utilidades.Comparadores.ordenarPorDuracionAscen);
+        
+        for (Peliculas pel : listaPeli) {
+            System.out.println(pel);
+        }
+    }
+    
+    public void ordenaAZ(ArrayList<Peliculas>listaPeli){
+    
+        Collections.sort(listaPeli, utilidades.Comparadores.ordenarAlfaAZ);
+        
+        for (Peliculas pel : listaPeli) {
+            System.out.println(pel);
+        }
+    }
+    
+    public void ordenaZA(ArrayList<Peliculas>listaPeli){
+    
+        Collections.sort(listaPeli, utilidades.Comparadores.ordenarAlfaZA);
+        
+        for (Peliculas pel : listaPeli) {
+            System.out.println(pel);
+        }
+    }
+    
 }

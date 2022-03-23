@@ -36,9 +36,16 @@ public class ClaseMain {
         System.out.println("===================================");
       
         serv.mostrarPelis(listaPeli);
-        //serv.mostrarPeliMasDeUnaHora(listaPeli);
+        System.out.println("_____Pelis Mas de una hora____");
+        serv.mostrarPeliMasDeUnaHora(listaPeli);
+        System.out.println("____Mayor a menor___");
         serv.ordenaMayoraMenor(listaPeli);
-        
+        System.out.println("____ Menor A Mayor____");
+        serv.ordenaMenoraMayor(listaPeli);
+        System.out.println("____Pelis de A a Z");
+        serv.ordenaAZ(listaPeli);
+        System.out.println("____Pelis de Z a A");
+        serv.ordenaZA(listaPeli);
     }
       
       
